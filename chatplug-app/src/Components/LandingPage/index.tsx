@@ -11,8 +11,9 @@ export default class Landing extends React.Component<{}> {
           source={require('../../../assets/chatplug.png')}
         />
         <Text>Welcome in ChatPlug Client</Text>
-        <Text>Log in to chatplug using your pin...</Text>
-        <LandingButton>ddd</LandingButton>
+        <Text>Log in to chatplug using your unique pin</Text>
+        <Pin placeholder="PIN" ></Pin>
+        <LandingButton>Log in</LandingButton>
       </View>
     );
   }
@@ -29,12 +30,20 @@ const Logo = styled.Image`
     margin-bottom: 50px;
 `;
 
+const Pin = styled.TextInput`
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+`;
+
 const LandingButton = styled.Text`
+    margin-top: 6px;
     display: flex;
-    width: 30rem;
-    height: 15rem;
+    width: 80px;
+    height: 40px;
     border-radius: 4px;
-    justify-content: center;
+    padding: 9px;
+    text-align: center;
     background-color: #0386F4;
     color: #fff;
 `;
