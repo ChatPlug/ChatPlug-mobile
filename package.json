@@ -1,0 +1,18 @@
+{
+  "name": "chatplug-mobile",
+  "version": "0.0.1",
+  "description": "Mobile app for chatplug",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerekKiri/ChatPlug-APP.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SerekKiri/ChatPlug-APP/issues"
+  },
+  "homepage": "https://github.com/SerekKiri/ChatPlug-APP#readme"
+}
