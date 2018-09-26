@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Landing from './src/Components/LandingPage/index'
 
 export default class App extends React.Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Siema chatplug</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Landing></Landing>
       </View>
     );
   }
