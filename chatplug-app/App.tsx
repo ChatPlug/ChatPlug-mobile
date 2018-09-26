@@ -1,9 +1,23 @@
 import * as React from 'react';
-import App from './LoadingPage';
+import { StyleSheet, Text, View } from 'react-native';
 
-import * as renderer from 'react-test-renderer';
+export default class App extends React.Component<{}> {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Siema chatplug</Text>
+        <Text>Changes you make will automatically reload.</Text>
+        <Text>Shake your phone to open the developer menu.</Text>
+      </View>
+    );
+  }
+}
 
-it('renders without crashing', () => {
-  const rendered = renderer.create(<App />).toJSON();
-  expect(rendered).toBeTruthy();
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
