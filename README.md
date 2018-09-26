@@ -20,7 +20,7 @@ Download `.APK` [here](https://github.com/SerekKiri/ChatPlug-mobile/releases)
 
 Join our discord server [discordapp.com/invite](https://discord.gg/xdWemhA) or describe your problem in [issues](https://github.com/SerekKiri/ChatPlug-mobile/issues).
 
-# :shipit: Contributing
+# ✋ Contributing
 
 If you want to help with the project, you can have a look at some [issues](https://github.com/SerekKiri/ChatPlug-mobile/issues) or join our discord server [discordapp.com/invite](https://discord.gg/xdWemhA). All help is much appreciated 🍻
 # 📜 License
