@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/SerekKiri/ChatPlug-APP/issues"
   },
-  "homepage": "https://github.com/SerekKiri/ChatPlug-APP#readme"
+  "homepage": "https://github.com/SerekKiri/ChatPlug-APP#readme",
+  "dependencies": {
+    "@types/react-navigation": "^2.0.22"
+  }
 }

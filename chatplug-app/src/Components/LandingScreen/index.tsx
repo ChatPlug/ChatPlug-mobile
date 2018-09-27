@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Text, Button } from 'react-native';
+import { Text } from 'react-native';
 import styled from 'styled-components/native'
 
 
-export default class Landing extends React.Component<{}> {
+export default class LandingScreen extends React.Component<{ navigation: any }> {
   render() {
     return (
       <View>
@@ -12,18 +12,18 @@ export default class Landing extends React.Component<{}> {
         />
         <Text>Welcome in ChatPlug Client</Text>
         <Text>Log in to chatplug using your unique pin</Text>
-        <Pin placeholder="PIN" ></Pin>
-        <LandingButton>Log in</LandingButton>
+        <Pin placeholder="PIN" ></Pin> 
+        <Button onPress={() => this.props.navigation.navigate('Connections')}>Log in</Button>
       </View>
-    );
+    )
   }
 }
 
 const View = styled.View`
-      flex: 1;
       background-color: #fff;
       align-items: center;
       justify-content: center;
+      flex: 1;
 `;
 
 const Logo = styled.Image`
@@ -36,7 +36,7 @@ const Pin = styled.TextInput`
     padding: 5px;
 `;
 
-const LandingButton = styled.Text`
+const Button = styled.Text`
     margin-top: 6px;
     display: flex;
     width: 80px;

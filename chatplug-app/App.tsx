@@ -1,16 +1,11 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Landing from './src/Components/LandingPage/index'
+import { NativeRouter, Switch, Route } from 'react-router-native'
+import { createStackNavigator } from 'react-navigation'
 
-export default class App extends React.Component<{}> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Landing></Landing>
-      </View>
-    );
-  }
-}
+// Imports
+import LandingScreen from './src/Components/LandingScreen/index'
+import ThreadConnectionsScreen from './src/Components/ThreadConnectionsScreen/index'
 
 const styles = StyleSheet.create({
   container: {
@@ -19,4 +14,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
+
+export default createStackNavigator(
+  {
+    Landing: { screen: LandingScreen, navigationOptions: { header: null } },
+    Connections: ThreadConnectionsScreen,
+  },
+  {
+    initialRouteName: 'Landing',  
+  }  
+)
