@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { NativeRouter, Switch, Route } from 'react-router-native'
+import { StyleSheet } from 'react-native';
 import { createStackNavigator } from 'react-navigation'
 
 // Imports
