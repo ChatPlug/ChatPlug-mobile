@@ -21,7 +21,7 @@ import { threadsList } from './reducer'
 
 class ThreadConnectionsScreen extends React.Component<any>{
   componentDidMount() {
-    this.props.threadsList('192.168.1.37')
+    this.props.threadsList('')
   }
   renderItem = ({ item }) => (
     <View>
