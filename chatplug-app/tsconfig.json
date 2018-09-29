@@ -12,6 +12,7 @@
     "noEmitHelpers": true,
     "importHelpers": true,
     "strict": true,
-    "noImplicitReturns": true
+    "noImplicitAny": false,
+    "noImplicitReturns": false
   }
 }
