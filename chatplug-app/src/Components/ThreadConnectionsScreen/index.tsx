@@ -9,7 +9,7 @@ import reducer from './reducer'
 import ThreadList from './threadlist'
 
 const client = axios.create({
-  baseURL: ' http://your_ip_here',
+  baseURL: 'http://192.168.1.37',
   responseType: 'json'
 })
 

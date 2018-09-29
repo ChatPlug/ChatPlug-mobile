@@ -27,5 +27,5 @@ export function listThreads(port) {
         url: `:${port}/api/v1/connections`
       }
     }
-  };
+  }
 }

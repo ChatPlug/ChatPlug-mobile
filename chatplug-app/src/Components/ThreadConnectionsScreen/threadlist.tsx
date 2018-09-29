@@ -10,7 +10,7 @@ class ThreadList extends Component<any>{
   }
   renderItem = ({ item }) => (
     <View style={styles.item}>
-      <Text>{item.connectionName}</Text>
+      <Text>{item.data.connectionName}</Text>
     </View>
   );
   render() {
