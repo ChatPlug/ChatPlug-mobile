@@ -14,6 +14,7 @@ export default class ThreadConnectionsScreen extends React.Component<any>{
     return (
       <View>
         <ThreadListContainer/>
+        <Button onPress={() => this.props.navigation.navigate('ChatScreen')}>Let's chat</Button>
       </View>
     )
   }
@@ -25,3 +26,15 @@ const View = styled.View`
       justify-content: flex-start;
       flex: 1;
 `
+
+const Button = styled.Text`
+    margin-top: 6px;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 9px;
+    text-align: center;
+    background-color: #0386F4;
+    color: #fff;
+`;
