@@ -6,20 +6,14 @@ import axios from 'axios'
 import axiosMiddleware from 'redux-axios-middleware'
 
 import reducer from './reducer'
-import ThreadList from './threadlist'
-
-const client = axios.create({
-  baseURL: 'http://192.168.1.37',
-  responseType: 'json'
-})
-
-const store = createStore(reducer, applyMiddleware(axiosMiddleware(client)))
+import ThreadListContainer from '../../containers/ThreadListContainer'
 
 export default class ThreadConnectionsScreen extends React.Component<any>{
+
   render() {
     return (
       <View>
-        <ThreadList />
+        <ThreadListContainer/>
       </View>
     )
   }

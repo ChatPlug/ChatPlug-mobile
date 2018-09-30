@@ -1,7 +1,7 @@
-import { Reducer } from 'redux'
+import { Reducer, AnyAction } from 'redux'
 import Thread from '../types/Thread'
 
-import { GET_THREAD_LIST, ThreadListActions } from '../actions/threadListActions'
+import { GET_THREAD_LIST, GET_THREAD_LIST_SUCCESS, ThreadListActions, GET_THREAD_LIST_FAIL } from '../actions/threadListActions'
 
 export interface ThreadListState {
   readonly threadList: Thread[]
@@ -11,10 +11,18 @@ const defaultState: ThreadListState = {
   threadList: []
 }
 
-// @ts-ignore
-export const threadListReducer: Reducer<ThreadListState> = (state = defaultState, action: ThreadListActions) => {
+export const threadListReducer: Reducer<ThreadListState, ThreadListActions> = (state = defaultState, action: ThreadListActions) => {
   switch (action.type) {
-    case GET_THREAD_LIST: {
+    case GET_THREAD_LIST_SUCCESS: {
+      console.log(action.payload)
+      return {
+        ...state,
+        threadList: []
+      }
+    }
+
+    case GET_THREAD_LIST_FAIL: {
+      console.log(action.payload)
       return {
         ...state,
         threadList: []

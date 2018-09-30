@@ -2,22 +2,21 @@ import React, { Component } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 
-import { listThreads } from './reducer'
 
-class ThreadList extends Component<any>{
+export default class ThreadList extends Component<any>{
   componentDidMount() {
-    this.props.listThreads('2137')
+    this.props.getThreadList()
   }
   renderItem = ({ item }) => (
     <View style={styles.item}>
-      <Text>{item.data.connectionName}</Text>
+      <Text>{item.connectionName}</Text>
     </View>
   );
   render() {
-    const { threads } = this.props;
+    const { threadList } = this.props;
     return (
       <FlatList
-        data={threads}
+        data={threadList}
         renderItem={this.renderItem}
       />
     );
@@ -34,16 +33,3 @@ const styles = StyleSheet.create({
     borderBottomColor: '#ccc'
   }
 });
-
-const mapStateToProps = state => {
-  let storedThreads = state.threads.map(thread => ({ key: `${thread.data.id}`, ...thread }))
-  return {
-    threds: storedThreads
-  };
-};
-
-const mapDispatchToProps = {
-  listThreads
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ThreadList)
