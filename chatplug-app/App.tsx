@@ -5,13 +5,13 @@ import { createStore, applyMiddleware } from 'redux'
 import axios from 'axios'
 import { Provider } from 'react-redux'
 // Imports
-import LandingScreen from './src/Components/LandingScreen/index'
-import ThreadConnectionsScreen from './src/Components/ThreadConnectionsScreen/index'
+import LandingScreen from './src/components/LandingScreen/index'
+import ThreadConnectionsScreen from './src/components/ThreadConnectionsScreen/index'
 import { rootReducer } from './src/reducers'
 import axiosMiddleware from 'redux-axios-middleware'
 
 const client = axios.create({
-  baseURL: 'http://192.168.254.107:2137/api/v1',
+  baseURL: 'http://192.168.1.37:2137/api/v1',
   responseType: 'json'
 }) 
 

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { RootState } from '../reducers'
 import { Dispatch } from 'redux'
-import ThreadList from '../Components/ThreadConnectionsScreen/threadlist'
+import ThreadList from '../components/ThreadConnectionsScreen/threadlist'
 import { getThreadList, GetThreadList } from '../actions/threadListActions';
 
 const mapStateToProps = (state: RootState, props) => ({

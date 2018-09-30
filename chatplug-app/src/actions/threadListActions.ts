@@ -6,13 +6,11 @@ export const GET_THREAD_LIST_FAIL = 'GET_THREAD_LIST_FAIL'
 
 export interface GetThreadList extends Action {
   type: 'GET_THREAD_LIST',
-  payload: {
     payload: {
       request: {
         url: '/connections' 
       }
     }
-  }
 }
 
 export interface GetThreadListSuccess extends Action {
@@ -27,13 +25,11 @@ export interface GetThreadListFail extends Action {
 
 export const getThreadList: ActionCreator<GetThreadList> = () => ({
   type: 'GET_THREAD_LIST',
-  payload: {
     payload: {
       request: {
         url: '/connections' 
       }
     }
-  }
 })
 
 export type ThreadListActions = GetThreadList | GetThreadListFail | GetThreadListSuccess

@@ -8,24 +8,22 @@ export interface ThreadListState {
 }
 
 const defaultState: ThreadListState = {
-  threadList: []
+  threadList: [],
 }
 
 export const threadListReducer: Reducer<ThreadListState, ThreadListActions> = (state = defaultState, action: ThreadListActions) => {
   switch (action.type) {
     case GET_THREAD_LIST_SUCCESS: {
-      console.log(action.payload)
       return {
         ...state,
-        threadList: []
+        threadList: (action.payload as any).data.data
       }
     }
 
     case GET_THREAD_LIST_FAIL: {
-      console.log(action.payload)
       return {
         ...state,
-        threadList: []
+        threadList: (action.payload as any).data.data
       }
     }
     default:
