@@ -18,12 +18,10 @@ const store = createStore(reducer, applyMiddleware(axiosMiddleware(client)))
 export default class ThreadConnectionsScreen extends React.Component<any>{
   render() {
     return (
-      <Provider store={store}>
-        <View>
-          <ThreadList />
-        </View>
-    </Provider>
-    );
+      <View>
+        <ThreadList />
+      </View>
+    )
   }
 }
 
@@ -32,4 +30,4 @@ const View = styled.View`
       padding: 3px;
       justify-content: flex-start;
       flex: 1;
-`;
+`
