@@ -17,6 +17,7 @@ export default class ThreadList extends Component<any>{
     return (
       <FlatList
         data={threadList}
+        keyExtractor={(item, _) => '' + item.id}
         renderItem={this.renderItem}
       />
     );
