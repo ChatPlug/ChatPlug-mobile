@@ -1,7 +1,7 @@
 import { GiftedChat } from 'react-native-gifted-chat'
 import React from 'react'
 
-class Chat extends React.Component<{}, { messages: any[] }> {
+export default class Chat extends React.Component<{}, { messages: any[] }> {
   state = {
     messages: [],
   }
@@ -41,5 +41,3 @@ class Chat extends React.Component<{}, { messages: any[] }> {
     )
   }
 }
-
-export default Chat
