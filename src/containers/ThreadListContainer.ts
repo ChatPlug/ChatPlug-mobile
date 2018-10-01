@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { RootState } from '../reducers'
 import { Dispatch } from 'redux'
-import ThreadList from '../components/ThreadConnectionsScreen/threadlist'
+import ThreadList from '../components/ThreadConnectionsScreen/ThreadList'
 import { getThreadList, GetThreadList } from '../actions/threadListActions';
 
 const mapStateToProps = (state: RootState, props) => ({
@@ -10,7 +10,7 @@ const mapStateToProps = (state: RootState, props) => ({
 })
 
 const mapDispatchToProps = (dispatch: Dispatch<GetThreadList>) => ({
-  getThreadList: guildId => dispatch(getThreadList(guildId))
+  getThreadList: () => dispatch(getThreadList())
 })
 
 export default connect(

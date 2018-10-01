@@ -1,4 +1,5 @@
 import { Action, ActionCreator } from 'redux'
+import Thread from '../types/Thread'
 
 export const GET_THREAD_LIST = 'GET_THREAD_LIST'
 export const GET_THREAD_LIST_SUCCESS = 'GET_THREAD_LIST_SUCCESS'
@@ -15,7 +16,11 @@ export interface GetThreadList extends Action {
 
 export interface GetThreadListSuccess extends Action {
   type: 'GET_THREAD_LIST_SUCCESS',
-  payload: {}
+  payload: {
+    data: {
+      data: Thread[]
+    }
+  }
 }
 
 export interface GetThreadListFail extends Action {
