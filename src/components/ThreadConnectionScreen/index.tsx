@@ -3,7 +3,6 @@ import styled from 'styled-components/native'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import axios from 'axios'
-import axiosMiddleware from 'redux-axios-middleware'
 
 import reducer from './reducer'
 import ThreadListContainer from '../../containers/ThreadListContainer'
