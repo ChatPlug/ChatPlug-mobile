@@ -2,7 +2,7 @@ import { Reducer, AnyAction } from 'redux'
 import Thread from '../types/Thread'
 
 import Message from '../types/Message'
-import { MessagesActions, GET_MESSAGES_SUCCESS, GET_MESSAGES_FAIL } from '../actions/messagesActions';
+import { MessagesActions, GET_MESSAGES_SUCCESS, GET_MESSAGES_FAIL, GET_EARLIER_MESSAGES_SUCCESS } from '../actions/messagesActions';
 
 export interface MessagesState {
   readonly messages: Message[]
@@ -18,6 +18,13 @@ export const messagesReducer: Reducer<MessagesState, MessagesActions> = (state =
       return {
         ...state,
         messages: action.payload.data.data
+      }
+    }
+
+    case GET_EARLIER_MESSAGES_SUCCESS: {
+      return {
+        ...state,
+        messages: state.messages.concat(action.payload.data.data)
       }
     }
 

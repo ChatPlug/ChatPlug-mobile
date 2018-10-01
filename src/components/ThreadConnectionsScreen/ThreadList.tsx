@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
+import Thread from '../../types/Thread';
 
 
-export default class ThreadList extends Component<any>{
+export default class ThreadList extends Component<{ openThread: (thread: Thread) => any }>{
   componentDidMount() {
     this.props.getThreadList()
   }
   renderItem = ({ item }) => (
-    <View style={styles.item}>
+    <View onTouchEnd={() => this.props.openThread(item)} style={styles.item}>
       <Text>{item.connectionName}</Text>
     </View>
   );

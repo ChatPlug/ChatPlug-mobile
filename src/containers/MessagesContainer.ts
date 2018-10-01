@@ -3,7 +3,7 @@ import { RootState } from '../reducers'
 import { Dispatch } from 'redux'
 import ThreadList from '../components/ThreadConnectionsScreen/ThreadList'
 import { getThreadList, GetThreadList } from '../actions/threadListActions'
-import { GetMessages, getMessages } from '../actions/messagesActions'
+import { GetMessages, getMessages, getEarlierMessages } from '../actions/messagesActions'
 import Messages from '../components/ChatScreen/Messages'
 
 const mapStateToProps = (state: RootState, props) => ({
@@ -12,7 +12,9 @@ const mapStateToProps = (state: RootState, props) => ({
 })
 
 const mapDispatchToProps = (dispatch: Dispatch<GetMessages>) => ({
-  getMessages: (payload: any) => dispatch(getMessages(payload))
+  getMessages: (payload: any) => dispatch(getMessages(payload)),
+  getEarlierMessages: (payload: any) => dispatch(getEarlierMessages(payload))
+
 })
 
 export default connect(

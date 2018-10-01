@@ -6,14 +6,14 @@ import axios from 'axios'
 
 import reducer from './reducer'
 import ThreadListContainer from '../../containers/ThreadListContainer'
+import Thread from '../../types/Thread';
 
 export default class ThreadConnectionsScreen extends React.Component<any>{
 
   render() {
     return (
       <View>
-        <ThreadListContainer/>
-        <Button onPress={() => this.props.navigation.navigate('ChatScreen')}>Let's chat</Button>
+        <ThreadListContainer openThread={(thread: Thread) => this.props.navigation.navigate('ChatScreen', { threadName: thread.connectionName, threadId: thread.id })}/>
       </View>
     )
   }
