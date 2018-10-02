@@ -12,7 +12,7 @@ import { rootReducer } from './src/reducers'
 import axiosMiddleware from 'redux-axios-middleware'
 
 const client = axios.create({
-  baseURL: 'http://192.168.254.103:2137/api/v1',
+  baseURL: 'http://192.168.1.37:2137/api/v1',
   responseType: 'json'
 }) 
 
