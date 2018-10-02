@@ -23,8 +23,6 @@ Join our discord server [discordapp.com/invite](https://discord.gg/xdWemhA) or d
 # ✋ Contributing
 
 If you want to help with the project, you can have a look at some [issues](https://github.com/SerekKiri/ChatPlug-mobile/issues) or join our discord server [discordapp.com/invite](https://discord.gg/xdWemhA). All help is much appreciated 🍻
-# 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 # 🏃 Running application
 
@@ -61,3 +59,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   ```
   npm test
   ```
+
+# 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
