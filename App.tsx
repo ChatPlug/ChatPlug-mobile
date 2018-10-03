@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import * as React from 'react'
+import { StyleSheet, StatusBar, View } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 import { createStore, applyMiddleware } from 'redux'
 import axios from 'axios'
@@ -32,7 +32,10 @@ const Stack = createStackNavigator(
 export default () => {
   return(
     <Provider store={store}>
-      <Stack/>
+      <View>
+        <StatusBar barStyle="dark-content" />
+        <Stack/>
+      </View>
     </Provider>
   )
 }
