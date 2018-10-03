@@ -9,7 +9,15 @@ import ThreadListContainer from '../../containers/ThreadListContainer'
 import Thread from '../../types/Thread';
 
 export default class ThreadConnectionsScreen extends React.Component<any>{
-
+  static navigationOptions = ({ navigation }) => ({
+    title: 'Threads',
+     headerTitleStyle : {
+       textAlign: 'center',
+      },
+        headerStyle:{
+            backgroundColor:'white',
+        },
+    });
   render() {
     return (
       <View>
