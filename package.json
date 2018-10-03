@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@types/jest": "^22.2.3",
+    "@types/jest": "^23.3.2",
     "@types/node": "^10.11.2",
+    "@types/expo": "^27.0.11",
     "@types/react": "^16.4.14",
     "@types/react-native": "^0.55.28",
     "@types/react-navigation": "^2.0.22",
@@ -51,11 +52,10 @@
     }
   },
   "dependencies": {
-    "expo": "^27.0.1",
-    "jest-cli": "^23.6.0",
-    "react": "16.3.1",
+    "expo": "^30.0.1",
+    "react": "^16.5.2",
     "react-addons-test-utils": "^15.6.2",
-    "react-native": "~0.57.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-native-gifted-chat": "^0.4.3",
     "react-navigation": "^2.17.0",
     "react-redux": "^5.0.7",
