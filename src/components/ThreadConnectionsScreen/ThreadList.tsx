@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { View, Text, FlatList, StyleSheet } from 'react-native'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 import Thread from '../../types/Thread';
 
 

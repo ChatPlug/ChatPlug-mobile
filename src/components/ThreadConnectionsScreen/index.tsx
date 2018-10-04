@@ -1,10 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components/native'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import axios from 'axios'
 
-import reducer from './reducer'
+
+// Imports
 import ThreadListContainer from '../../containers/ThreadListContainer'
 import Thread from '../../types/Thread';
 
@@ -25,15 +23,3 @@ const View = styled.View`
       justify-content: flex-start;
       flex: 1;
 `
-
-const Button = styled.Text`
-    margin-top: 6px;
-    display: flex;
-    width: 80px;
-    height: 40px;
-    border-radius: 4px;
-    padding: 9px;
-    text-align: center;
-    background-color: #0386F4;
-    color: #fff;
-`;

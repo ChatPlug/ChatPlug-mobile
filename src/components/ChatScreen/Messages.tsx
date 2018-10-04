@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, FlatList, StyleSheet, KeyboardAvoidingView } from 'react-native'
-import { connect } from 'react-redux'
+import {KeyboardAvoidingView } from 'react-native'
 import { GiftedChat } from 'react-native-gifted-chat'
 import Message from '../../types/Message'
 

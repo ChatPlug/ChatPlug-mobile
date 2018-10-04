@@ -1,4 +1,3 @@
-import { GiftedChat } from 'react-native-gifted-chat'
 import React from 'react'
 import MessagesContainer from '../../containers/MessagesContainer';
 
