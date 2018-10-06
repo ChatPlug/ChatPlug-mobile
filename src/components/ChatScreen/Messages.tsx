@@ -12,16 +12,27 @@ export default class Messages extends Component<{  threadId: number, getEarlierM
 
   render() {
     return (
-    <KeyboardAvoidingView behavior={'padding'} style={{flex:1}} keyboardVerticalOffset={75}> 
-      <GiftedChat
-        loadEarlier={true}
-        onLoadEarlier={() => { this.props.getEarlierMessages({ id: 1, after: this.props.messages[this.props.messages.length - 1].id })  }}
-        messages={this.props.messages.map((el: Message) => { return { _id: el.id, text: el.content, createdAt: el.createdAt, user: { _id: el.author.id, name: el.author.username, avatar: el.author.avatarUrl } } }) }
-        user={{
-          _id: 1,
-        }}
-      />
-    </KeyboardAvoidingView>
+      <KeyboardAvoidingView 
+        behavior={'padding'} 
+        style={{flex:1}} 
+        keyboardVerticalOffset={75}>
+          <GiftedChat
+            loadEarlier={true}
+            onLoadEarlier={() => { this.props.getEarlierMessages({ id: 1, after: this.props.messages[this.props.messages.length - 1].id })  }}
+            messages= {
+              this.props.messages.map((el: Message) => {
+                return {
+                   _id: el.id, text: el.author.username + '\n' + el.content, createdAt: el.createdAt, user: {
+                     _id: el.author.id, name: 'el.author.username', avatar: el.author.avatarUrl 
+                  } 
+                } 
+              }) 
+            }
+            user={{
+            _id: 1,
+            }}
+          />
+      </KeyboardAvoidingView>
     )
   }
 }

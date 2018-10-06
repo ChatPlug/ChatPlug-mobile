@@ -57,6 +57,7 @@
     "react-addons-test-utils": "^15.6.2",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-native-gifted-chat": "^0.4.3",
+    "react-native-markdown-renderer": "^3.2.8",
     "react-navigation": "^2.17.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
