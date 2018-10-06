@@ -12,9 +12,18 @@ import { rootReducer } from './src/reducers'
 import axiosMiddleware from 'redux-axios-middleware'
 
 const client = axios.create({
-  baseURL: 'http://192.168.1.37:2137/api/v1',
+  baseURL: 'http://192.168.254.106:2137/api/v1',
   responseType: 'json'
 }) 
+client.interceptors.request.use(request => {
+  console.log('Starting Request', request)
+  return request
+})
+
+client.interceptors.response.use(response => {
+  console.log('Response:', response)
+  return response
+})
 
 const store = createStore(rootReducer, applyMiddleware(axiosMiddleware(client)))
 

@@ -5,7 +5,7 @@ import Message from '../../types/Message'
 
 export default class Messages extends Component<{  threadId: number, getEarlierMessages: (payload: any) => any, getMessages: (payload: any) => any, messages: Message[] }, {}>{
   componentDidMount() {
-    this.props.getMessages({ id: this.props.threadId })
+    this.props.getMessages({ connId: this.props.threadId })
   }
   onSend() {
   }
@@ -18,7 +18,7 @@ export default class Messages extends Component<{  threadId: number, getEarlierM
         keyboardVerticalOffset={75}>
           <GiftedChat
             loadEarlier={true}
-            onLoadEarlier={() => { this.props.getEarlierMessages({ id: 1, after: this.props.messages[this.props.messages.length - 1].id })  }}
+            onLoadEarlier={() => { this.props.getEarlierMessages({ connId: this.props.threadId, after: this.props.messages[this.props.messages.length - 1].id })  }}
             messages= {
               this.props.messages.map((el: Message) => {
                 return {
