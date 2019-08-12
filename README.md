@@ -32,8 +32,7 @@ If you want to help with the project, you can have a look at some [issues](https
 
 ### What do you need?
 
-- [Node.js](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com/)
+- [Flutter](https://flutter.dev/)
 
 ### 🤘 Let's start
 
@@ -55,15 +54,15 @@ If you want to help with the project, you can have a look at some [issues](https
   ```
 - Install depedencies
   ```
-  npm i
+  flutter packages get
   ```
 - Running application
   ```
-  npm start
+  flutter run
   ```
 - Testing application
   ```
-  npm test
+  flutter test
   ```
 
 # 📜 License
